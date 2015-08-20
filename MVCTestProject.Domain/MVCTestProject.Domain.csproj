@@ -78,7 +78,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IGamesRepository.cs" />
-    <Compile Include="Entities\Game.cs" />
+    <Compile Include="Entities\GameBase.cs" />
+    <Compile Include="Logic\Game.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

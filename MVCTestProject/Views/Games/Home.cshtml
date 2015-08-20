@@ -1,5 +1,5 @@
 ﻿@using MVCTestProject.Domain.Entities
-@model IEnumerable<Game>
+@model IEnumerable<GameBase>
 
 @{
     ViewBag.Title = "Home";
@@ -11,12 +11,7 @@
 
     @foreach (var g in Model)
     {
-        using (Html.BeginForm("StartGame", "Game"))
-        {
-            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-        <button type="submit" value="@g.Name" >@g.Name</button>
-        <br />
-        }
+        @Html.Partial("GamesButtons", g)
     }
 </div>
 

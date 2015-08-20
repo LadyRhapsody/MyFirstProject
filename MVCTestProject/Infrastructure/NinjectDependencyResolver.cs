@@ -17,7 +17,7 @@ namespace MVCTestProject.Infrastructure
         public NinjectDependencyResolver(IKernel kernelParam)
         {
             kernel = kernelParam;
-            AddBindings();  
+            AddBindings();
         }
 
         public object GetService(Type serviceType)
@@ -33,11 +33,11 @@ namespace MVCTestProject.Infrastructure
         private void AddBindings()
         {
             Mock<IGamesRepository> mock = new Mock<IGamesRepository>();
-            mock.Setup(m => m.Games).Returns(new List<Game>
+            mock.Setup(m => m.Games).Returns(new List<GameBase>
             {
-                new Game {Name = "Vier Gewinnt" },
-                new Game {Name = "Mensch Äger dich nicht" },
-                new Game {Name = "My Town Story" }
+                new GameBase (1, "Vier Gewinnt", "startVier" ),
+                new GameBase (2,"Mensch Äger dich nicht","startMensch" ),
+                new GameBase (3, "My Town Story", "startTown" )
             });
 
             kernel.Bind<IGamesRepository>().ToConstant(mock.Object);

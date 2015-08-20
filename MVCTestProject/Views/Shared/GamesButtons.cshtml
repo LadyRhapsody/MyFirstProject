@@ -1,0 +1,9 @@
+﻿@model MVCTestProject.Domain.Entities.GameBase
+     
+
+@using (Html.BeginForm("StartGame", "Game"))
+{
+@Html.HiddenFor(p => p.GameId)
+@Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+    <input type="submit" class="btn btn-success" value="@Model.Name" />
+}

@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVCTestProject.Domain.Abstract
+namespace MVCTestProject.Domain.Logic
 {
-    public interface IGamesRepository
+    public class Game
     {
-        IEnumerable<GameBase> Games { get; }
+        public GameBase actualGame { get; set; }
     }
 }

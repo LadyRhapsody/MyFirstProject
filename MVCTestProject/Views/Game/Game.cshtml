@@ -1,7 +1,13 @@
-﻿
+﻿@using MVCTestProject.Domain.Entities
+@model MVCTestProject.Models.GameViewModel
+
+
+
 @{
-    ViewBag.Title = "Spiel";
+    ViewBag.Title = "Game";
 }
 
-<h2>Spiel</h2>
+@Model.MyGame.GameId
+<h2>@Model.MyGame.Name</h2>
+<h3>Blub</h3>
 
