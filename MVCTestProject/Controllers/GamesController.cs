@@ -13,9 +13,9 @@ namespace MVCTestProject.Controllers
 
         public GamesController(IGamesRepository repo)
         {
-            this.repository = repo;
+            repository = repo;
         }
-        public ViewResult GameList()
+        public ViewResult Home()
         {
             return View(repository.Games);
         }

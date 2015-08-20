@@ -1,0 +1,28 @@
+﻿@using MVCTestProject.Domain.Entities
+@model IEnumerable<Game>
+
+@{
+    ViewBag.Title = "Home";
+}
+<div id="buttonDiv">
+
+    <h1>Willkommen!</h1>
+    <h2>Bitte wähle ein Spiel aus!</h2>
+
+    @foreach (var g in Model)
+    {
+        using (Html.BeginForm("StartGame", "Game"))
+        {
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+        <button type="submit" value="@g.Name" >@g.Name</button>
+        <br />
+        }
+    }
+</div>
+
+
+
+
+
+
+

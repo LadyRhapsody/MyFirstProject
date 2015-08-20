@@ -1,7 +1,10 @@
-﻿#buttonTable{
-    width:auto;
+﻿#buttonDiv{
+        text-align:center;
+        
+            margin:auto 0;
 }
-#buttonTable, input{
-    text-align:center;
-    width:400px
+#buttonDiv, input{
+    
+    width:400px;
+    margin:5px 5px 5px 5px
 }
