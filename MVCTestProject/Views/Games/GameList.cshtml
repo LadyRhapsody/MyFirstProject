@@ -1,0 +1,35 @@
+﻿@using MVCTestProject.Domain.Entities
+@model IEnumerable<Game>
+
+@{
+    ViewBag.Title = "GameList";
+}
+<div style="text-align:center">
+    <div>
+        <table id="buttonTable" class="table" align="center">
+            <tr>
+                <td style=" border:none">
+
+                    <h1 style="text-align:center">Willkommen!</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style=" border:none">
+                    <h2 style="text-align:center">Bitte wähle ein Spiel aus!</h2>
+                </td>
+            </tr>
+
+            @foreach (var g in Model)
+            {
+                <tr>
+                    <td style=" border:none">
+                        <input type="submit" class="btn btn-success" style="margin:5px 5px 5px 5px" value="@g.Name" />
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</div>
+

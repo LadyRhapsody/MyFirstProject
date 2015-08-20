@@ -1,0 +1,7 @@
+﻿#buttonTable{
+    width:auto;
+}
+#buttonTable, input{
+    text-align:center;
+    width:400px
+}
