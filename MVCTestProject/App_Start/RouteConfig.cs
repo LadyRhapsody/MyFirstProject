@@ -15,13 +15,13 @@ namespace MVCTestProject
 
             routes.MapRoute(
                null,
-               "{Name}",
-               new { controller = "Game", action = "Game" });
+               "Game/Game",
+               new { controller = "Game", action = "Game", id = "" });
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}",
-                defaults: new { controller = "Games", action = "Home", id = UrlParameter.Optional }
+                defaults: new { controller = "Games", action = "Home" }
             );
            
         }

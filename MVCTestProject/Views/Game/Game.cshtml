@@ -4,8 +4,12 @@
 @{
     ViewBag.Title = "Game";
 }
+<script type="text/javascript" src="~/Scripts/@Model.ActualGame.StartFunction"></script>
+<div style="text-align:center">
+    @Model.ActualGame.GameId
+    <h2>@Model.ActualGame.Name</h2>
+    <h3>Blub</h3>
+    <div id="gameView">
 
-@Model.ActualGame.GameId
-<h2>@Model.ActualGame.Name</h2>
-<h3>Blub</h3>
-
+    </div>
+</div>

@@ -21,16 +21,22 @@ namespace MVCTestProject.Controllers
 
         public ViewResult Game(Game game)
         {
+            if (game.ActualGame.GameId == 1)
+            {
+                game = new FourInARow(game.ActualGame);
+            }
             return View(game);
         }
         public RedirectToRouteResult StartGame(Game game, int gameID ,string returnUrl)
         {
             GameBase gameb = repository.Games.FirstOrDefault(p => p.GameId == gameID);
 
-            game.StartGame(gameb);
 
+            game.StartGame(gameb);
 
             return RedirectToAction("Game", game);     
         }
+
+     
     }
 }

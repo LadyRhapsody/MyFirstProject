@@ -79,7 +79,10 @@
   <ItemGroup>
     <Compile Include="Abstract\IGamesRepository.cs" />
     <Compile Include="Entities\GameBase.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Logic\FourInARowTocken.cs" />
     <Compile Include="Logic\Game.cs" />
+    <Compile Include="Logic\FourInARow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

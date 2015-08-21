@@ -11,6 +11,7 @@ namespace MVCTestProject.Infrastructure.Binder
     public class GameModelBinder : IModelBinder
     {
         private const string sessionKey = "Game";
+        
         public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
             Game game = null;
@@ -20,7 +21,7 @@ namespace MVCTestProject.Infrastructure.Binder
             }
                 if (game == null)
             {
-
+                
                 game = new Game();
                 if (controllerContext.HttpContext.Session != null)
                 {

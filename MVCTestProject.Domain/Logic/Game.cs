@@ -10,6 +10,7 @@ namespace MVCTestProject.Domain.Logic
     public class Game
     {
         public GameBase ActualGame { get; set; }
+        public IEnumerable<Player> Player { get; set; }
 
         public void StartGame(GameBase gameb)
         {

@@ -35,7 +35,7 @@ namespace MVCTestProject.Infrastructure
             Mock<IGamesRepository> mock = new Mock<IGamesRepository>();
             mock.Setup(m => m.Games).Returns(new List<GameBase>
             {
-                new GameBase (1, "Vier Gewinnt", "startVier" ),
+                new GameBase (1, "Vier Gewinnt", "gamestart.js" ),
                 new GameBase (2,"Mensch Äger dich nicht","startMensch" ),
                 new GameBase (3, "My Town Story", "startTown" ),
                 new GameBase (4,"Wack-A-Mole","startWack")
