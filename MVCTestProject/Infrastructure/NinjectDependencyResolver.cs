@@ -37,7 +37,8 @@ namespace MVCTestProject.Infrastructure
             {
                 new GameBase (1, "Vier Gewinnt", "startVier" ),
                 new GameBase (2,"Mensch Äger dich nicht","startMensch" ),
-                new GameBase (3, "My Town Story", "startTown" )
+                new GameBase (3, "My Town Story", "startTown" ),
+                new GameBase (4,"Wack-A-Mole","startWack")
             });
 
             kernel.Bind<IGamesRepository>().ToConstant(mock.Object);

@@ -14,6 +14,19 @@ namespace MVCTestProject.Infrastructure.Binder
         public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
             Game game = null;
+            if (controllerContext.HttpContext.Session != null)
+            {
+                game = (Game)controllerContext.HttpContext.Session[sessionKey];
+            }
+                if (game == null)
+            {
+
+                game = new Game();
+                if (controllerContext.HttpContext.Session != null)
+                {
+                    controllerContext.HttpContext.Session[sessionKey] = game;
+                }
+            }
 
             return game;
         }

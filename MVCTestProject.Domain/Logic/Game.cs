@@ -9,6 +9,11 @@ namespace MVCTestProject.Domain.Logic
 {
     public class Game
     {
-        public GameBase actualGame { get; set; }
+        public GameBase ActualGame { get; set; }
+
+        public void StartGame(GameBase gameb)
+        {
+            ActualGame = gameb;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MVCTestProject.Domain.Abstract;
 using MVCTestProject.Domain.Entities;
+using MVCTestProject.Domain.Logic;
 using MVCTestProject.Models;
 using System;
 using System.Collections.Generic;
@@ -18,14 +19,15 @@ namespace MVCTestProject.Controllers
             repository = repo;
         }
 
-        public ViewResult Game(GameBase game)
+        public ViewResult Game(Game game)
         {
-            return View(new GameViewModel {MyGame= game });
+            return View(game);
         }
-        public RedirectToRouteResult StartGame(int gameID ,string returnUrl)
+        public RedirectToRouteResult StartGame(Game game, int gameID ,string returnUrl)
         {
-            GameBase game = repository.Games.FirstOrDefault(p => p.GameId == gameID);
-            
+            GameBase gameb = repository.Games.FirstOrDefault(p => p.GameId == gameID);
+
+            game.StartGame(gameb);
 
 
             return RedirectToAction("Game", game);     

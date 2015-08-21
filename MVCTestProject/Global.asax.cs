@@ -7,6 +7,8 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using MVCTestProject.Domain.Logic;
+using MVCTestProject.Infrastructure.Binder;
 
 namespace MVCTestProject
 {
@@ -17,7 +19,8 @@ namespace MVCTestProject
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            ModelBinders.Binders.Add(typeof(Game), new GameModelBinder());         
         }
     }
 }
